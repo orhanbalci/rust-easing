@@ -1,3 +1,4 @@
+pub mod functions;
+
 #[test]
-fn it_works() {
-}
+fn it_works() {}
