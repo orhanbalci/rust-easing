@@ -1,0 +1,6 @@
+[package]
+name = "easing"
+version = "0.1.0"
+authors = ["orhan.balci <orhanbalci@gmail.com>"]
+
+[dependencies]
