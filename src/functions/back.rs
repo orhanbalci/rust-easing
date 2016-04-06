@@ -1,7 +1,7 @@
-use super::ease::easing;
+use super::ease::Easing;
 struct Back;
 
-impl easing for Back {
+impl Easing for Back {
     fn ease_in(t: f32, b: f32, c: f32, d: f32) -> f32 {
         let s = 1.70158_f32;
         let inner_t = t / d;
@@ -19,7 +19,7 @@ impl easing for Back {
         let mut s = 1.70158_f32;
         let mut inner_t = t / d / 2.0;
         if inner_t < 1.0 {
-            s *=  1.525f32;
+            s *= 1.525f32;
             return c / 2.0 * (inner_t * inner_t * ((s + 1.0) * inner_t - s)) + b;
         }
         inner_t -= 2.0;
