@@ -22,7 +22,23 @@ impl Easing for Circ {
 
         inner_t -= 2.0;
         return c/2.0 * ((1.0 - inner_t * inner_t).sqrt() + 1.0 ) + b;
+    }
+}
 
+mod test {
+    use functions::ease::Easing;
+    #[test]
+    fn test_circ_eas_in(){
+        relative_eq!(super::Circ::ease_in(1.0,2.0,3.0,4.0), 2.095263);
     }
 
+    #[test]
+    fn test_circ_ease_out(){
+        relative_eq!(super::Circ::ease_out(1.0,2.0,3.0,4.0), 3.984313);
+    }
+
+    #[test]
+    fn test_circ_ease_in_out(){
+        relative_eq!(super::Circ::ease_in_out(1.0,2.0,3.0,4.0), 2.200962);
+    }
 }
