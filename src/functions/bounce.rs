@@ -38,7 +38,7 @@ mod test {
     fn test_ease_out() {
         use functions::ease::Easing;
         relative_eq!(super::Bounce::ease_out(1.0, 2.0, 3.0, 4.0), 3.4179);
-        relative_eq!(super::Bounce::ease_out(1.0,2.0,3.0,2.0), 4.2968);
+        relative_eq!(super::Bounce::ease_out(1.0, 2.0, 3.0, 2.0), 4.2968);
     }
 
 }
