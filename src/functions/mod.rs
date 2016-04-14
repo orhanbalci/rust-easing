@@ -8,3 +8,5 @@ pub mod expo;
 pub mod linear;
 pub mod quad;
 pub mod quart;
+pub mod quint;
+pub mod sine;
