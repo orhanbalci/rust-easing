@@ -5,3 +5,5 @@ pub mod circ;
 pub mod cubic;
 pub mod elastic;
 pub mod expo;
+pub mod linear;
+pub mod quad;
