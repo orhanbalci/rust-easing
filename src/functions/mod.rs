@@ -7,3 +7,4 @@ pub mod elastic;
 pub mod expo;
 pub mod linear;
 pub mod quad;
+pub mod quart;
