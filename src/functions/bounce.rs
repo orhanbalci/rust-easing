@@ -34,11 +34,20 @@ impl Easing for Bounce {
 }
 
 mod test {
+    use functions::ease::Easing;
     #[test]
-    fn test_ease_out() {
-        use functions::ease::Easing;
+    fn ease_out() {
         relative_eq!(super::Bounce::ease_out(1.0, 2.0, 3.0, 4.0), 3.4179);
         relative_eq!(super::Bounce::ease_out(1.0, 2.0, 3.0, 2.0), 4.2968);
     }
 
+    #[test]
+    fn ease_in() {
+        relative_eq!(super::Bounce::ease_in(1.0, 2.0, 3.0, 4.0), 2.082031);
+    }
+
+    #[test]
+    fn ease_in_out() {
+        relative_eq!(super::Bounce::ease_in_out(1.0, 2.0, 3.0, 4.0), 2.351562);
+    }
 }

@@ -28,3 +28,21 @@ impl Easing for Back {
         return c / 2.0 * (post_fix * inner_t * ((inner_s + 1.0) * inner_t + inner_s) + 2.0) + b;
     }
 }
+
+mod test {
+    use functions::ease::Easing;
+    #[test]
+    fn test_back_ease_in() {
+        relative_eq!(super::Back::ease_in(1.0, 2.0, 3.0, 4.0), 1.807590);
+    }
+
+    #[test]
+    fn test_back_ease_out() {
+        relative_eq!(super::Back::ease_out(1.0, 2.0, 3.0, 4.0), 4.452229);
+    }
+
+    #[test]
+    fn test_back_ease_in_out() {
+        relative_eq!(super::Back::ease_in_out(1.0, 2.0, 3.0, 4.0), 1.700954);
+    }
+}
