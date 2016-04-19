@@ -1,6 +1,6 @@
 use super::ease::Easing;
 
-struct Cubic;
+pub struct Cubic;
 
 impl Easing for Cubic {
     fn ease_in(t: f32, b: f32, c: f32, d: f32) -> f32 {

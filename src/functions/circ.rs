@@ -1,6 +1,6 @@
 use super::ease::Easing;
 
-struct Circ;
+pub struct Circ;
 
 impl Easing for Circ {
     fn ease_in(t: f32, b: f32, c: f32, d: f32) -> f32 {
