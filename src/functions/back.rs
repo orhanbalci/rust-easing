@@ -5,7 +5,7 @@ impl Easing for Back {
     fn ease_in(t: f32, b: f32, c: f32, d: f32) -> f32 {
         let s = 1.70158_f32;
         let inner_t = t / d;
-        let post_fix = t;
+        let post_fix = inner_t;
         c * (post_fix) * inner_t * ((s + 1.0) * inner_t - s) + b
     }
 
@@ -17,7 +17,7 @@ impl Easing for Back {
 
     fn ease_in_out(t: f32, b: f32, c: f32, d: f32) -> f32 {
         let mut s = 1.70158_f32;
-        let mut inner_t = t / d / 2.0;
+        let mut inner_t = t / (d / 2.0);
         if inner_t < 1.0 {
             s *= 1.525f32;
             return c / 2.0 * (inner_t * inner_t * ((s + 1.0) * inner_t - s)) + b;
@@ -32,17 +32,17 @@ impl Easing for Back {
 mod test {
     use functions::ease::Easing;
     #[test]
-    fn test_back_ease_in() {
-        relative_eq!(super::Back::ease_in(1.0, 2.0, 3.0, 4.0), 1.807590);
+    fn ease_in() {
+        assert_relative_eq!(super::Back::ease_in(1.0, 2.0, 3.0, 4.0), 1.8075902);
     }
 
     #[test]
-    fn test_back_ease_out() {
-        relative_eq!(super::Back::ease_out(1.0, 2.0, 3.0, 4.0), 4.452229);
+    fn ease_out() {
+        assert_relative_eq!(super::Back::ease_out(1.0, 2.0, 3.0, 4.0), 4.452229);
     }
 
     #[test]
-    fn test_back_ease_in_out() {
-        relative_eq!(super::Back::ease_in_out(1.0, 2.0, 3.0, 4.0), 1.700954);
+    fn ease_in_out() {
+        assert_relative_eq!(super::Back::ease_in_out(1.0, 2.0, 3.0, 4.0), 1.7009544);
     }
 }

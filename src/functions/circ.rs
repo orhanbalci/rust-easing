@@ -27,17 +27,17 @@ impl Easing for Circ {
 mod test {
     use functions::ease::Easing;
     #[test]
-    fn test_circ_ease_in() {
-        relative_eq!(super::Circ::ease_in(1.0, 2.0, 3.0, 4.0), 2.095263);
+    fn ease_in() {
+        assert_relative_eq!(super::Circ::ease_in(1.0, 2.0, 3.0, 4.0), 2.0952625);
     }
 
     #[test]
-    fn test_circ_ease_out() {
-        relative_eq!(super::Circ::ease_out(1.0, 2.0, 3.0, 4.0), 3.984313);
+    fn ease_out() {
+        assert_relative_eq!(super::Circ::ease_out(1.0, 2.0, 3.0, 4.0), 3.9843135);
     }
 
     #[test]
-    fn test_circ_ease_in_out() {
-        relative_eq!(super::Circ::ease_in_out(1.0, 2.0, 3.0, 4.0), 2.200962);
+    fn ease_in_out() {
+        assert_relative_eq!(super::Circ::ease_in_out(1.0, 2.0, 3.0, 4.0), 2.200962);
     }
 }
