@@ -14,7 +14,7 @@ impl Easing for Quart {
     }
 
     fn ease_in_out(t: f32, b: f32, c: f32, d: f32) -> f32 {
-        let mut inner_t = t / d / 2.0;
+        let mut inner_t = t / (d / 2.0);
 
         if inner_t < 1.0 {
             return c / 2.0 * inner_t * inner_t * inner_t * inner_t + b;
@@ -22,5 +22,23 @@ impl Easing for Quart {
 
         inner_t -= 2.0;
         return -c / 2.0 * (inner_t.powi(4) - 2.0) + b;
+    }
+}
+
+mod test {
+    use functions::ease::Easing;
+    #[test]
+    fn ease_in() {
+        assert_relative_eq!(super::Quart::ease_in(1.0, 2.0, 3.0, 4.0), 2.011719);
+    }
+
+    #[test]
+    fn ease_out() {
+        assert_relative_eq!(super::Quart::ease_out(1.0, 2.0, 3.0, 4.0), 4.050781);
+    }
+
+    #[test]
+    fn ease_in_out() {
+        assert_relative_eq!(super::Quart::ease_in_out(1.0, 2.0, 3.0, 4.0), 2.093750);
     }
 }
