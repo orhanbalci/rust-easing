@@ -15,3 +15,21 @@ impl Easing for Linear {
         c * t / d + b
     }
 }
+
+mod test {
+    use functions::ease::Easing;
+    #[test]
+    fn ease_in() {
+        assert_relative_eq!(super::Linear::ease_in(1.0, 2.0, 3.0, 4.0), 2.7500);
+    }
+
+    #[test]
+    fn ease_out() {
+        assert_relative_eq!(super::Linear::ease_out(1.0, 2.0, 3.0, 4.0), 2.7500);
+    }
+
+    #[test]
+    fn ease_in_out() {
+        assert_relative_eq!(super::Linear::ease_in_out(1.0, 2.0, 3.0, 4.0), 2.7500);
+    }
+}
