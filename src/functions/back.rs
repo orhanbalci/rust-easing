@@ -1,4 +1,5 @@
 use super::ease::Easing;
+/// This struct captures Back easing functions
 pub struct Back;
 
 impl Easing for Back {
