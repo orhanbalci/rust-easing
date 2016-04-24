@@ -73,15 +73,23 @@ mod test {
     #[test]
     fn ease_in() {
         assert_relative_eq!(super::Elastic::ease_in(1.0, 2.0, 3.0, 4.0), 1.983427);
+        assert_relative_eq!(super::Elastic::ease_in(0.0, 1.0, 100.0, 100.0), 1.0000);
+        assert_relative_eq!(super::Elastic::ease_in(100.0,1.0,100.0,100.0),101.000);
     }
 
     #[test]
     fn ease_out() {
         assert_relative_eq!(super::Elastic::ease_out(1.0, 2.0, 3.0, 4.0), 4.734835);
+        assert_relative_eq!(super::Elastic::ease_out(0.0,1.0,100.0,100.0), 1.0000);
+        assert_relative_eq!(super::Elastic::ease_out(100.0,1.0,100.0,100.0), 101.000);
     }
 
     #[test]
     fn ease_in_out() {
         assert_relative_eq!(super::Elastic::ease_in_out(1.0, 2.0, 3.0, 4.0), 2.035908);
+        assert_relative_eq!(super::Elastic::ease_in_out(0.0,1.0,100.0,100.0), 1.0000);
+        assert_relative_eq!(super::Elastic::ease_in_out(100.0,1.0,100.0,100.0), 101.0000);
+        assert_relative_eq!(super::Elastic::ease_in_out(51.0,1.0,100.0,100.0), 59.158646);
+
     }
 }
