@@ -24,7 +24,7 @@ impl Easing for Back {
             return c / 2.0 * (inner_t * inner_t * ((s + 1.0) * inner_t - s)) + b;
         }
         inner_t -= 2.0;
-        let post_fix: f32 = t;
+        let post_fix: f32 = inner_t;
         let inner_s = s * 1.525f32;
         return c / 2.0 * (post_fix * inner_t * ((inner_s + 1.0) * inner_t + inner_s) + 2.0) + b;
     }
@@ -45,5 +45,6 @@ mod test {
     #[test]
     fn ease_in_out() {
         assert_relative_eq!(super::Back::ease_in_out(1.0, 2.0, 3.0, 4.0), 1.7009544);
+        assert_relative_eq!(super::Back::ease_in_out(51.0, 1.0, 100.0, 100.0), 56.432546);
     }
 }
