@@ -39,6 +39,8 @@ mod test {
     fn ease_out() {
         assert_relative_eq!(super::Bounce::ease_out(1.0, 2.0, 3.0, 4.0), 3.4179688);
         assert_relative_eq!(super::Bounce::ease_out(1.0, 2.0, 3.0, 2.0), 4.296875);
+        assert_relative_eq!(super::Bounce::ease_out(100.0, 1.0, 100.0, 100.0),
+                            101.000000);
     }
 
     #[test]
@@ -49,5 +51,7 @@ mod test {
     #[test]
     fn ease_in_out() {
         assert_relative_eq!(super::Bounce::ease_in_out(1.0, 2.0, 3.0, 4.0), 2.3515625);
+        assert_relative_eq!(super::Bounce::ease_in_out(51.0, 1.0, 100.0, 100.0),
+                            51.151250);
     }
 }
