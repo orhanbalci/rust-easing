@@ -18,7 +18,7 @@ impl Easing for Cubic {
         if inner_t < 1.0 {
             return c / 2.0 * inner_t.powi(3) + b;
         }
-        inner_t -= 2.0;
+        inner_t = inner_t - 2.0;
         return c / 2.0 * (inner_t.powi(3) + 2.0) + b;
     }
 }
@@ -38,5 +38,7 @@ mod test {
     #[test]
     fn ease_in_out() {
         assert_relative_eq!(super::Cubic::ease_in_out(1.0, 2.0, 3.0, 4.0), 2.187500);
+        assert_relative_eq!(super::Cubic::ease_in_out(51.0, 1.0, 100.0, 100.0),
+                            53.940397);
     }
 }
