@@ -39,16 +39,21 @@ mod test {
     #[test]
     fn ease_in() {
         assert_relative_eq!(super::Expo::ease_in(1.0, 2.0, 3.0, 4.0), 2.016573);
+        assert_relative_eq!(super::Expo::ease_in(0.0,1.0,100.0,100.0), 1.000000);
     }
 
     #[test]
     fn ease_out() {
         assert_relative_eq!(super::Expo::ease_out(1.0, 2.0, 3.0, 4.0), 4.469670);
+        assert_relative_eq!(super::Expo::ease_out(100.0,1.0,100.0,100.0), 101.0000);
     }
 
     #[test]
     fn ease_in_out() {
         assert_relative_eq!(super::Expo::ease_in_out(1.0, 2.0, 3.0, 4.0), 2.046875);
+        assert_relative_eq!(super::Expo::ease_in_out(0.0,1.0,100.0,100.0), 1.0000);
+        assert_relative_eq!(super::Expo::ease_in_out(100.0,1.0,100.0,100.0), 101.000);
+        assert_relative_eq!(super::Expo::ease_in_out(51.0,1.0,100.0,100.0), 57.472466);
     }
 
 }
