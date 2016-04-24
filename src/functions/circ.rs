@@ -39,5 +39,6 @@ mod test {
     #[test]
     fn ease_in_out() {
         assert_relative_eq!(super::Circ::ease_in_out(1.0, 2.0, 3.0, 4.0), 2.200962);
+        assert_relative_eq!(super::Circ::ease_in_out(51.0, 1.0, 100.0, 100.0), 60.949871);
     }
 }
