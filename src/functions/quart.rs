@@ -26,6 +26,7 @@ impl Easing for Quart {
 }
 
 mod test {
+    #[allow(unused_imports)]
     use functions::ease::Easing;
     #[test]
     fn ease_in() {
@@ -40,6 +41,7 @@ mod test {
     #[test]
     fn ease_in_out() {
         assert_relative_eq!(super::Quart::ease_in_out(1.0, 2.0, 3.0, 4.0), 2.093750);
-        assert_relative_eq!(super::Quart::ease_in_out(51.0, 1.0, 100.0, 100.0), 54.881588);
+        assert_relative_eq!(super::Quart::ease_in_out(51.0, 1.0, 100.0, 100.0),
+                            54.881588);
     }
 }

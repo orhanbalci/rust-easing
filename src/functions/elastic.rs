@@ -68,6 +68,7 @@ impl Easing for Elastic {
 }
 
 mod test {
+    #[allow(unused_imports)]
     use functions::ease::Easing;
 
     #[test]

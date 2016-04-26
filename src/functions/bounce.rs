@@ -34,6 +34,7 @@ impl Easing for Bounce {
 }
 
 mod test {
+    #[allow(unused_imports)]
     use functions::ease::Easing;
     #[test]
     fn ease_out() {

@@ -25,6 +25,7 @@ impl Easing for Circ {
 }
 
 mod test {
+    #[allow(unused_imports)]
     use functions::ease::Easing;
     #[test]
     fn ease_in() {

@@ -1,7 +1,13 @@
 [package]
-name = "easing"
+name = "easer"
 version = "0.1.0"
 authors = ["orhan.balci <orhanbalci@gmail.com>"]
+description="Tiny library imlementing Robert Penner's easing functions"
+documentation="http://orhanbalci.github.io/rust-easing/easing/index.html"
+homepage="https://github.com/orhanbalci"
+repository="https://github.com/orhanbalci/rust-easing.git"
+keywords=["easing","animation","tween"]
+license="MIT"
 
 [dependencies]
 approx="0.1.0"

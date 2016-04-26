@@ -31,6 +31,7 @@ impl Easing for Back {
 }
 
 mod test {
+    #[allow(unused_imports)]
     use functions::ease::Easing;
     #[test]
     fn ease_in() {

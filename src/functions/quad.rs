@@ -14,7 +14,7 @@ impl Easing for Quad {
     }
 
     fn ease_in_out(t: f32, b: f32, c: f32, d: f32) -> f32 {
-        let mut inner_t = t / (d / 2.0);
+        let inner_t = t / (d / 2.0);
         if inner_t < 1.0 {
             return (c / 2.0 * (inner_t.powi(2))) + b;
         }
@@ -24,6 +24,7 @@ impl Easing for Quad {
 }
 
 mod test {
+    #[allow(unused_imports)]
     use functions::ease::Easing;
     #[test]
     fn ease_in() {
