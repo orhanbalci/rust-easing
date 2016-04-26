@@ -8,6 +8,7 @@ homepage="https://github.com/orhanbalci"
 repository="https://github.com/orhanbalci/rust-easing.git"
 keywords=["easing","animation","tween"]
 license="MIT"
+exclude=[".travis.yml"]
 
 [dependencies]
 approx="0.1.0"
