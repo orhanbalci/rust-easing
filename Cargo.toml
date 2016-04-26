@@ -1,9 +1,9 @@
 [package]
 name = "easer"
 version = "0.1.0"
-authors = ["orhan.balci <orhanbalci@gmail.com>"]
+authors = ["Orhan Balci <orhanbalci@gmail.com>"]
 description="Tiny library imlementing Robert Penner's easing functions"
-documentation="http://orhanbalci.github.io/rust-easing/easing/index.html"
+documentation="http://orhanbalci.github.io/rust-easing"
 homepage="https://github.com/orhanbalci"
 repository="https://github.com/orhanbalci/rust-easing.git"
 keywords=["easing","animation","tween"]
