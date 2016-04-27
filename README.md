@@ -7,4 +7,4 @@
 
 Tiny Rust library implementing Robert Penner's easing functions
 
-You can get the documentation [here] (http://orhanbalci.github.io/rust-easing/easing/index.html).
+You can get the documentation [here] ( http://orhanbalci.github.io/rust-easing).
