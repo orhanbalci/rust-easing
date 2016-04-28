@@ -1,5 +1,5 @@
 use super::ease::Easing;
-
+/// This struct captures Circ easing functions
 pub struct Circ;
 
 impl Easing for Circ {

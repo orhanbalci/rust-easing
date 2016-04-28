@@ -1,4 +1,5 @@
 use super::ease::Easing;
+/// This struct captures Bounce easing functions
 pub struct Bounce;
 
 impl Easing for Bounce {

@@ -1,5 +1,6 @@
 use super::ease::Easing;
 
+/// This struct captures Cubic easing functions
 pub struct Cubic;
 
 impl Easing for Cubic {
