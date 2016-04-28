@@ -1,6 +1,7 @@
 use super::ease::Easing;
 use std::f32::consts::PI;
 
+/// This struct captures Sine easing functions
 pub struct Sine;
 
 impl Easing for Sine {

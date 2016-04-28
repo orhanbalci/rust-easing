@@ -1,5 +1,5 @@
 use super::ease::Easing;
-
+/// This struct captures quadratic easing functions
 pub struct Quad;
 
 impl Easing for Quad {

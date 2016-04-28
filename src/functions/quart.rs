@@ -1,5 +1,5 @@
 use super::ease::Easing;
-
+/// This struct captures Quart easing functions
 pub struct Quart;
 
 impl Easing for Quart {

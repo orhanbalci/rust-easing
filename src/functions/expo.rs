@@ -1,4 +1,5 @@
 use super::ease::Easing;
+/// This struct captures Expo easing functions
 pub struct Expo;
 
 impl Easing for Expo {

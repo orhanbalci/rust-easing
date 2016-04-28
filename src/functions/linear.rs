@@ -1,5 +1,6 @@
 use super::ease::Easing;
 
+/// This struct captures Linear easing functions
 pub struct Linear;
 
 impl Easing for Linear {

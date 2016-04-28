@@ -1,5 +1,6 @@
 use super::ease::Easing;
 
+/// This struct captures Quint easing functions
 pub struct Quint;
 
 impl Easing for Quint {

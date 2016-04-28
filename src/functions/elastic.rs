@@ -1,5 +1,7 @@
 use super::ease::Easing;
 use std::f32::consts::PI;
+
+/// This struct captures Elastic easing functions
 pub struct Elastic;
 
 impl Easing for Elastic {
