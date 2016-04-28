@@ -24,6 +24,7 @@ impl Easing for Cubic {
     }
 }
 
+#[cfg(test)]
 mod test {
     #[allow(unused_imports)]
     use functions::ease::Easing;

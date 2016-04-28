@@ -23,6 +23,7 @@ impl Easing for Quad {
     }
 }
 
+#[cfg(test)]
 mod test {
     #[allow(unused_imports)]
     use functions::ease::Easing;
