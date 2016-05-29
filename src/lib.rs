@@ -14,7 +14,7 @@
 //!
 //! #example
 //!
-//! ```no_run
+//! ```
 //! use easer::functions::*;
 //! let mut y: [f32; 100] = [0.0; 100];
 //! for i in 0..100 {
