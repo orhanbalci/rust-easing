@@ -4,18 +4,18 @@ use super::ease::Easing;
 pub struct Quad;
 
 impl Easing for Quad {
-    fn ease_in(t: f32, b: f32, c: f32, d: f32) -> f32 {
-        let inner_t = t / d;
-        c * inner_t.powi(2) + b
+    fn ease_in(mut t: f32, b: f32, c: f32, d: f32) -> f32 {
+        t = t / d;
+        c * t * t + b
     }
 
-    fn ease_out(t: f32, b: f32, c: f32, d: f32) -> f32 {
-        let inner_t = t / d;
-        -c * inner_t * (inner_t - 2.0) + b
+    fn ease_out(mut t: f32, b: f32, c: f32, d: f32) -> f32 {
+        t = t / d;
+        -c * t * (t - 2.0) + b
     }
 
-    fn ease_in_out(t: f32, b: f32, c: f32, d: f32) -> f32 {
-        let mut t = t / (d / 2.0);
+    fn ease_in_out(mut t: f32, b: f32, c: f32, d: f32) -> f32 {
+        t = t / (d / 2.0);
         if t < 1.0 {
             c / 2.0 * t * t + b
         }
