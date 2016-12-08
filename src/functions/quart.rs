@@ -4,23 +4,23 @@ use super::ease::Easing;
 pub struct Quart;
 
 impl Easing for Quart {
-    fn ease_in(mut t: f32, b: f32, c: f32, d: f32) -> f32 {
-        t = t / d;
+    fn ease_in(t: f32, b: f32, c: f32, d: f32) -> f32 {
+        let t = t / d;
         c * (t * t * t * t) + b
     }
 
-    fn ease_out(mut t: f32, b: f32, c: f32, d: f32) -> f32 {
-        t = t / d - 1.0;
+    fn ease_out(t: f32, b: f32, c: f32, d: f32) -> f32 {
+        let t = t / d - 1.0;
         -c * ((t * t * t * t) - 1.0) + b
     }
 
-    fn ease_in_out(mut t: f32, b: f32, c: f32, d: f32) -> f32 {
-        t = t / (d / 2.0);
+    fn ease_in_out(t: f32, b: f32, c: f32, d: f32) -> f32 {
+        let t = t / (d / 2.0);
         if t < 1.0 {
             c / 2.0 * (t * t * t * t) + b
         }
         else {
-            t -= 2.0;
+            let t = t - 2.0;
             -c / 2.0 * ((t * t * t * t) - 2.0) + b
         }
 

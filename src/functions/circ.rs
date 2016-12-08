@@ -4,23 +4,23 @@ use super::ease::Easing;
 pub struct Circ;
 
 impl Easing for Circ {
-    fn ease_in(mut t: f32, b: f32, c: f32, d: f32) -> f32 {
-        t = t / d;
+    fn ease_in(t: f32, b: f32, c: f32, d: f32) -> f32 {
+        let t = t / d;
         -c * ((1.0 - t * t).sqrt() - 1.0) + b
     }
 
-    fn ease_out(mut t: f32, b: f32, c: f32, d: f32) -> f32 {
-        t = t / d - 1.0;
+    fn ease_out(t: f32, b: f32, c: f32, d: f32) -> f32 {
+        let t = t / d - 1.0;
         c * (1.0 - t * t).sqrt() + b
     }
 
-    fn ease_in_out(mut t: f32, b: f32, c: f32, d: f32) -> f32 {
-        t = t / (d / 2.0);
+    fn ease_in_out(t: f32, b: f32, c: f32, d: f32) -> f32 {
+        let t = t / (d / 2.0);
         if t < 1.0 {
             -c / 2.0 * ((1.0 - t * t).sqrt() - 1.0) + b
         }
         else {
-            t -= 2.0;
+            let t = t - 2.0;
             c / 2.0 * ((1.0 - t * t).sqrt() + 1.0) + b
         }
     }

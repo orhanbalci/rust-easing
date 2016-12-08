@@ -4,28 +4,28 @@ use super::ease::Easing;
 pub struct Back;
 
 impl Easing for Back {
-    fn ease_in(mut t: f32, b: f32, c: f32, d: f32) -> f32 {
+    fn ease_in(t: f32, b: f32, c: f32, d: f32) -> f32 {
         let s = 1.70158_f32;
-        t = t / d;
+        let t = t / d;
         c * t * t * ((s + 1.0) * t - s) + b
     }
 
-    fn ease_out(mut t: f32, b: f32, c: f32, d: f32) -> f32 {
+    fn ease_out(t: f32, b: f32, c: f32, d: f32) -> f32 {
         let s = 1.70158_f32;
-        t = (t / d) - 1.0;
+        let t = (t / d) - 1.0;
         c * (t * t * ((s + 1.0) * t + s) + 1.0) + b
     }
 
-    fn ease_in_out(mut t: f32, b: f32, c: f32, d: f32) -> f32 {
-        let mut s = 1.70158_f32;
-        t = t / (d / 2.0);
+    fn ease_in_out(t: f32, b: f32, c: f32, d: f32) -> f32 {
+        let s = 1.70158_f32;
+        let t = t / (d / 2.0);
         if t < 1.0 {
-            s *= 1.525f32;
+            let s = s * 1.525f32;
             c / 2.0 * (t * t * ((s + 1.0) * t - s)) + b
         }
         else {
-            t -= 2.0;
-            s = s * 1.525f32;
+            let t = t - 2.0;
+            let s = s * 1.525f32;
             c / 2.0 * (t * t * ((s + 1.0) * t + s) + 2.0) + b
         }
     }
