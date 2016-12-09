@@ -1,4 +1,5 @@
 use super::ease::Easing;
+
 /// This struct captures Expo easing functions
 pub struct Expo;
 
@@ -26,12 +27,14 @@ impl Easing for Expo {
         if t == d {
             return b + c;
         }
-        let mut inner_t = t / (d / 2.0);
-        if inner_t < 1.0 {
-            return c / 2.0 * 2_f32.powf(10.0 * (inner_t - 1.0)) + b;
+        let t = t / (d / 2.0);
+        if t < 1.0 {
+            c / 2.0 * 2_f32.powf(10.0 * (t - 1.0)) + b
         }
-        inner_t -= 1.0;
-        return c / 2.0 * (-(2_f32.powf(-10.0 * inner_t)) + 2.0) + b;
+        else {
+            let t = t - 1.0;
+            c / 2.0 * (-(2_f32.powf(-10.0 * t)) + 2.0) + b
+        }
     }
 }
 
