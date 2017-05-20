@@ -1,10 +1,9 @@
-use num_traits;
 pub use num_traits::Float;
 
 /// Casts a literal f64 to an appropriate `Float` value
 #[inline]
 pub fn f<F: Float>(x: f64) -> F {
-    num_traits::cast(x).expect("cast failed, are you using non f32,f64 types?")
+    F::from(x).expect("cast failed, are you using non f32,f64 types?")
 }
 
 /// Macro for defining constants of generic Float type, reduces boiler plate when `f(1.23)` usage
