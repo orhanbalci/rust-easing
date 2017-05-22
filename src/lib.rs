@@ -16,15 +16,16 @@
 //!
 //! ```
 //! use easer::functions::*;
-//! let mut y: [f32; 100] = [0.0; 100];
+//! let mut y: [f64; 100] = [0.0; 100];
 //! for i in 0..100 {
-//!     y[i] = i as f32;
+//!     y[i] = i as f64;
 //! }
 //! println!("Before {:?}", &y[..]);
-//! y.iter_mut().map(|a| *a = Back::ease_in(*a, 0f32, 100f32, 100f32)).count();
+//! y.iter_mut().map(|a| *a = Back::ease_in(*a, 0.0, 100.0, 100.0)).count();
 //! println!("After {:?}", &y[..]);
 //!
 //! ```
+extern crate num_traits;
 
 pub mod functions;
 

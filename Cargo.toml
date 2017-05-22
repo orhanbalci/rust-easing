@@ -1,6 +1,6 @@
 [package]
 name = "easer"
-version = "0.1.1"
+version = "0.2.0"
 authors = ["Orhan Balci <orhanbalci@gmail.com>"]
 description="Tiny library imlementing Robert Penner's easing functions"
 documentation="http://orhanbalci.github.io/rust-easing"
@@ -10,11 +10,13 @@ keywords=["easing","animation","tween"]
 license="MIT"
 exclude=[".travis.yml"]
 
+[dependencies]
+num-traits="0.1"
+
 [dev-dependencies]
-approx="0.1.0"
-gnuplot="0.0.20"
+approx="0.1"
+gnuplot="0.0"
 
 [[example]]
 name="easer_plotter"
 path="examples/easer_plotter.rs"
-

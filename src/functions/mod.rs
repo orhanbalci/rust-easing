@@ -12,6 +12,8 @@ pub use self::quint::Quint;
 pub use self::sine::Sine;
 
 mod ease;
+#[macro_use]
+mod util;
 mod back;
 mod bounce;
 mod circ;
