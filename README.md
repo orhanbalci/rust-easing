@@ -3,8 +3,6 @@
 [![Coverage Status](https://coveralls.io/repos/github/orhanbalci/rust-easing/badge.svg?branch=master)](https://coveralls.io/github/orhanbalci/rust-easing?branch=master)
 ![License](https://img.shields.io/github/license/orhanbalci/rust-easing.svg)
 [![Crate Version](https://img.shields.io/crates/v/easer.svg)](https://crates.io/crates/easer)
+[![Documentation](https://docs.rs/easer/badge.svg)](https://docs.rs/easer)
 
-
-Tiny Rust library implementing Robert Penner's easing functions
-
-You can get the documentation [here] ( http://orhanbalci.github.io/rust-easing).
+Tiny Rust library implementing Robert Penner's easing functions.
