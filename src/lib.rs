@@ -25,7 +25,6 @@
 //! println!("After {:?}", &y[..]);
 //!
 //! ```
-#![no_std]
 extern crate num_traits;
 
 pub mod functions;

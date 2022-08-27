@@ -11,7 +11,7 @@ pub fn f<F: Float>(x: f64) -> F {
 /// equation readability by using constants like `_1_23`
 ///
 /// `cast_constants!(F; _1_23=1.23, _10=10);` is equivalent to
-/// ```no_run,ignore
+/// ```
 /// let _1_23: F = f(1.23);
 /// let _10: F = f(10 as f64);
 /// ```

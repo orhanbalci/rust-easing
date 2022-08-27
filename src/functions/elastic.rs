@@ -2,7 +2,7 @@ use super::ease::Easing;
 use functions::util::*;
 use num_traits::float::FloatConst;
 
-/// This struct captures Elastic easing functions
+/// This) struct captures Elastic easing functions
 #[derive(Debug)]
 pub struct Elastic;
 
