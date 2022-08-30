@@ -10,7 +10,7 @@ cortex-m = "0.7.3"
 cortex-m-rt = "0.7.0"
 nb = "1.0.0"
 nrf52840-hal = "0.15.1"
-easer = { version = "0.2.1", default-features = false, features = ["libm"] }
+easer = { version = "0.3.0", default-features = false, features = ["libm"] }
 panic-reset = "0.1.1"
 num-traits = { version = "0.2.15", default-features = false, features = ["libm"] }
 
