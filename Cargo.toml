@@ -13,6 +13,7 @@ exclude=[".travis.yml"]
 [features]
 default = ["std"]
 std = ["num-traits/std"]
+libm = ["num-traits/libm"]
 
 [dependencies]
 num-traits = { version = "0.2", default-features = false }
