@@ -1,6 +1,6 @@
 [package]
 name = "easer"
-version = "0.2.1"
+version = "0.3.0"
 authors = ["Orhan Balci <orhanbalci@gmail.com>"]
 description="Tiny library imlementing Robert Penner's easing functions"
 documentation="http://orhanbalci.github.io/rust-easing"
@@ -9,6 +9,8 @@ repository="https://github.com/orhanbalci/rust-easing.git"
 keywords=["easing","animation","tween"]
 license="MIT"
 exclude=[".travis.yml"]
+readme = "README.md"
+categories = ["mathematics", "algorithms", "no-std"]
 
 [features]
 default = ["std"]
