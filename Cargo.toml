@@ -10,8 +10,13 @@ keywords=["easing","animation","tween"]
 license="MIT"
 exclude=[".travis.yml"]
 
+[features]
+default = ["std"]
+std = ["num-traits/std"]
+libm = ["num-traits/libm"]
+
 [dependencies]
-num-traits="0.2"
+num-traits = { version = "0.2", default-features = false }
 
 [dev-dependencies]
 approx="0.2"
